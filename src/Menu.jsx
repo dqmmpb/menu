@@ -112,7 +112,7 @@ class Menu extends React.Component {
   // e.g., in rc-select, we need to navigate menu item while
   // current active item is rc-select input box rather than the menu itself
   onKeyDown = (e, callback) => {
-    if(this.innerMenu) {
+    if(this.innerMenu && typeof this.innerMenu.getWrappedInstance === 'function') {
         this.innerMenu.getWrappedInstance().onKeyDown(e, callback);
     }
   }

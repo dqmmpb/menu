@@ -170,7 +170,7 @@ var _initialiseProps = function _initialiseProps() {
   };
 
   this.onKeyDown = function (e, callback) {
-    if (_this3.innerMenu) {
+    if (_this3.innerMenu && typeof _this3.innerMenu.getWrappedInstance === 'function') {
       _this3.innerMenu.getWrappedInstance().onKeyDown(e, callback);
     }
   };
